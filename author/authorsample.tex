@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%% author.tex %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% sample root file for your "contribution" to a contributed volume
+%
+% Use this file as a template for your own input.
+%
+%%%%%%%%%%%%%%%% Springer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% RECOMMENDED %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[graybox]{svmult}
+
+% choose options for [] as required from the list
+% in the Reference Guide
+
+\usepackage{type1cm}        % activate if the above 3 fonts are
+                            % not available on your system
+%
+\usepackage{makeidx}         % allows index generation
+\usepackage{graphicx}        % standard LaTeX graphics tool
+                             % when including figure files
+\usepackage{multicol}        % used for the two-column index
+\usepackage[bottom]{footmisc}% places footnotes at page bottom
+
+
+\usepackage{newtxtext}       % 
+\usepackage{newtxmath}       % selects Times Roman as basic font
+
+% see the list of further useful packages
+% in the Reference Guide
+
+\makeindex             % used for the subject index
+                       % please use the style svind.ist with
+                       % your makeindex program
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title*{Multi-Agent Reinforcement Learning for the Energy Optimization of Cyber-Physical Production Systems}
+\titlerunning{MARL for the Energy Optimization of CPPS}
+% Use \titlerunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\author{Jupiter Bakakeu*, Shirin Baer, Hans-henning Klos, Joern Peschke, Matthias Brossog and Joerg Franke}
+% Use \authorrunning{Short Title} for an abbreviated version of
+% your contribution title if the original one is too long
+\authorrunning{Jupiter Bakakeu et al.}
+\institute{Jupiter Bakakeu, Matthias Brossog and Joerg Franke \at Friedrich-Alexander-Universität Erlangen-Nürnberg, Egerlandstr. 7-9, 91058 Erlangen, Germany, \email{jupiter.bakakeu@faps.fau.de, matthias.brossog@faps.fau.de, joerg.franke@faps.fau.de}
+\and Shirin Baer, Hans-henning Klos and Joern Peschke\at Siemens AG, Gleiwitzer Str. 555, 90475 Nuremberg, Germany, \email{schirin.baer@siemens.com, hans-henning.klos@siemens.com, joern.peschke@siemens.com}}
+%
+% Use the package "url.sty" to avoid
+% problems with special characters
+% used in your e-mail or web address
+%
+\maketitle
+
+\abstract*{This chapter proposes an artificial intelligence based solution for the efficient operation of a heterogeneous cluster of flexible manufacturing machines with energy generation and storage capabilities in an electricity micro grid featuring a high volatility of electricity prices. The problem of finding the optimal control policy is first formulated as game theoretic sequential decision making problem under uncertainty, where at every time step the uncertainty is characterized by future weather dependent energy prices, high demand fluctuation, as well as random unexpected disturbances on the factory floor. Because of the parallel interaction of the machines with the grid, the local viewpoints of an agent are non-stationary and non-Markovian. Therefore, traditional methods such as standard reinforcement learning approaches that learn a specialized policy for a single machine are not applicable. To address this problem, we propose a multi-agent actor-critic method that takes into account the policies of other participants to achieve explicit coordination between a large numbers of actors. We show the strength of our approach in mixed cooperative and competitive scenarios where different production machines were able to discover different coordination strategies in other to increase the energy efficiency of the whole factory floor.}
+
+\abstract{This chapter proposes an artificial intelligence based solution for the efficient operation of a heterogeneous cluster of flexible manufacturing machines with energy generation and storage capabilities in an electricity micro grid featuring a high volatility of electricity prices. The problem of finding the optimal control policy is first formulated as game theoretic sequential decision making problem under uncertainty, where at every time step the uncertainty is characterized by future weather dependent energy prices, high demand fluctuation, as well as random unexpected disturbances on the factory floor. Because of the parallel interaction of the machines with the grid, the local viewpoints of an agent are non-stationary and non-Markovian. Therefore, traditional methods such as standard reinforcement learning approaches that learn a specialized policy for a single machine are not applicable. To address this problem, we propose a multi-agent actor-critic method that takes into account the policies of other participants to achieve explicit coordination between a large numbers of actors. We show the strength of our approach in mixed cooperative and competitive scenarios where different production machines were able to discover different coordination strategies in other to increase the energy efficiency of the whole factory floor.}
+
+\section{Introduction}
+\label{sec:1}
+\input{introduction}
+
+\section{Backgrounds and Related Work}
+\label{sec:2}
+\input{backgrounds}
+
+\section{System Model and Problem Formulation}
+\label{sec:3}
+\input{system_model}
+
+\section{Approach}
+\label{sec:4}
+\input{approach}
+
+\section{Experiments}
+\label{sec:5}
+\input{experiments}
+
+\section{Conclusion and Future Work}
+\label{sec:6}
+\input{conclusion}
+
+\begin{acknowledgement}
+The authors would like to thank Joern Pechke, Hans-Henning Klos, Shirin Baer, and others at Siemens AG for interesting discussions related to this paper, as well as Matthias Brossog, Jonathan Fuchs and Dominik Kisskalt for the insightful comments on this manuscript. Finally, we’d like to thank Siemens AG for fostering an engaging and productive research environment.
+
+\end{acknowledgement}
+
+\input{references}
+\end{document}
